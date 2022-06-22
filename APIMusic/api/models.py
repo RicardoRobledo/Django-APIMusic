@@ -49,7 +49,7 @@ class Artist(models.Model):
     )
     role = models.CharField(max_length=15)
     created_at = models.DateTimeField(auto_now_add=True)
-    band = models.CharField(max_length=15)
+    band = models.IntegerField()
     
     
     def __str__(self):
