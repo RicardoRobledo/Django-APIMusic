@@ -151,4 +151,4 @@ class Song(models.Model):
     
     
     def __str__(self):
-        return self.album_name
+        return self.song_name
