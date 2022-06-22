@@ -66,7 +66,7 @@ class Band(models.Model):
     This class define our Band model
     
     Attributes:
-        band_name tuple(str): Band name.
+        band_name (str): Band name.
         musical_genre tuple(str): Musical genre that the band plays.
         created_at (datetime): Date of sign in of the band in the database.
     """
@@ -100,4 +100,26 @@ class Band(models.Model):
     
     def __str__(self):
         return self.band_name
+
+
+# -----------------------------------------------------------------
+#                             Album
+# -----------------------------------------------------------------
+
+
+class Album(models.Model):
+    """
+    This class define our Album model
     
+    Attributes:
+        album_name (str): Album name.
+        created_at (datetime): Date of sign in of the album in the database.
+    """
+
+    
+    album_name = models.CharField(max_length=15)
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    
+    def __str__(self):
+        return self.album_name
