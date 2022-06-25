@@ -26,3 +26,22 @@ class AlbumSerializer(serializers.ModelSerializer):
         
         model = Album
         fields = ('id', 'album_name', 'created_at',)
+
+
+# -----------------------------------------------------------------
+#                              Band
+# -----------------------------------------------------------------
+
+
+class BandSerializer(serializers.ModelSerializer):
+    """
+    Class to serialize Band class
+    """
+    
+    
+    class Meta:
+        
+        fields = ('id', 'band_name', 'musical_genre',
+                'created_at', 'album',)
+        model = Band
+
