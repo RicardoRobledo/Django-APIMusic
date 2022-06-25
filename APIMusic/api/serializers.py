@@ -45,3 +45,19 @@ class BandSerializer(serializers.ModelSerializer):
                 'created_at', 'album',)
         model = Band
 
+
+# -----------------------------------------------------------------
+#                             Artist
+# -----------------------------------------------------------------
+
+
+class ArtistSerializer(serializers.ModelSerializer):
+    """
+    Class to serialize Artist class
+    """
+    
+    
+    class Meta:
+        fields = ('id' ,'name', 'middle_name', 'last_name',
+                'age', 'genre', 'role', 'band',)
+        model = Artist
