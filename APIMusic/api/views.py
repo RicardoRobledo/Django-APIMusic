@@ -28,3 +28,14 @@ class ArtistViewSet(viewsets.ModelViewSet):
 
     queryset = Artist.objects.all()
     serializer_class = ArtistSerializer
+
+
+# -----------------------------------------------------------------
+#                            Band
+# -----------------------------------------------------------------
+
+
+class BandViewSet(viewsets.ModelViewSet):
+
+    queryset = Band.objects.all()
+    serializer_class = BandSerializer
