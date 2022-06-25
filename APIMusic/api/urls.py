@@ -12,7 +12,7 @@ from rest_framework.routers import SimpleRouter
 from .views import(
     AlbumViewSet,
     ArtistViewSet,
-    BandSerializer,
+    BandViewSet,
     SongViewSet
 )
 
@@ -21,7 +21,7 @@ from .views import(
 router = SimpleRouter()
 router.register('', ArtistViewSet, basename='artist')
 router.register('album', AlbumViewSet, basename='album')
-router.register('band', BandSerializer, basename='band')
+router.register('band', BandViewSet, basename='band')
 router.register('song', SongViewSet, basename='song')
 
 urlpatterns = router.urls

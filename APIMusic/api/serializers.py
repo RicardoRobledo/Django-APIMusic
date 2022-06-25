@@ -41,9 +41,9 @@ class BandSerializer(serializers.ModelSerializer):
     
     class Meta:
         
+        model = Band
         fields = ('id', 'band_name', 'musical_genre',
                 'created_at', 'album',)
-        model = Band
 
 
 # -----------------------------------------------------------------
@@ -58,9 +58,10 @@ class ArtistSerializer(serializers.ModelSerializer):
     
     
     class Meta:
+            
+        model = Artist
         fields = ('id' ,'name', 'middle_name', 'last_name',
                 'age', 'genre', 'role', 'band',)
-        model = Artist
 
 
 # -----------------------------------------------------------------
@@ -76,6 +77,6 @@ class SongSerializer(serializers.ModelSerializer):
     
     class Meta:
         
+        model = Song
         fields = ('id' ,'song_name', 'duration_in_minutes', 'created_at',
                 'band', 'album',)
-        model = Song
