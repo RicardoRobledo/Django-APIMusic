@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 
 __author__ = "Ricardo Robledo"
@@ -79,7 +80,7 @@ class Band(models.Model):
 # -----------------------------------------------------------------
 
 
-class Artist(models.Model):
+class Artist(AbstractUser):
     """
     This class define our Artist model
     
@@ -117,7 +118,6 @@ class Artist(models.Model):
         choices=Genre.choices
     )
     role = models.CharField(max_length=15)
-    created_at = models.DateTimeField(auto_now_add=True)
     band = models.ForeignKey('Band', on_delete=models.CASCADE)
     
     
