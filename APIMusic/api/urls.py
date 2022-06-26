@@ -19,9 +19,10 @@ from .views import(
 
 # paths
 router = SimpleRouter()
-router.register('', ArtistViewSet, basename='artist')
 router.register('album', AlbumViewSet, basename='album')
 router.register('band', BandViewSet, basename='band')
 router.register('song', SongViewSet, basename='song')
+# If it is last won't crash with other paths
+router.register('', ArtistViewSet, basename='artist')
 
 urlpatterns = router.urls
