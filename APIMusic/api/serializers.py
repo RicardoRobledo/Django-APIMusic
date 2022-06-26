@@ -55,7 +55,7 @@ class ArtistSerializer(serializers.ModelSerializer):
     """
     Class to serialize Artist class
     """
-    
+
     
     class Meta:
             

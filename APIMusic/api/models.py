@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
 
 
 __author__ = "Ricardo Robledo"
@@ -80,7 +79,7 @@ class Band(models.Model):
 # -----------------------------------------------------------------
 
 
-class Artist(AbstractUser):
+class Artist(models.Model):
     """
     This class define our Artist model
     
