@@ -42,6 +42,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     'rest_framework',
     'rest_framework.authtoken', # generates the tokens on the server
+    'dj_rest_auth', # add log in, log out, and password reset API endpoints
 ]
 
 LOCAL_APPS = [
