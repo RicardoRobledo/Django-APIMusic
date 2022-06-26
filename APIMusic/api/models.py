@@ -111,7 +111,6 @@ class Artist(models.Model):
     name = models.CharField(max_length=15)
     middle_name = models.CharField(max_length=15)
     last_name = models.CharField(max_length=15)
-    age = models.IntegerField()
     genre = models.CharField(
         max_length=1,
         choices=Genre.choices
