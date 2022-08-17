@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework.routers import SimpleRouter
 
-# Create your views here.
+from .viewsets import UserViewSet
+
+router = SimpleRouter()
+
+router.register('user', UserViewSet, basename='user')
+
+urlpatterns = router.urls

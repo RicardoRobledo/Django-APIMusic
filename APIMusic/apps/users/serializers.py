@@ -7,7 +7,12 @@ class UserSerializer(ModelSerializer):
     
     class Meta:
         model = User
-        fields = ('username', 'email', 'password', 'name',)
+        fields = ('id', 'username', 'email', 'password', 'name', 'created_at')
     
     def to_representation(self, instance):
-        return {}
+        return {
+            'id': instance.id,
+            'username': instance.username,
+            'email': instance.email,
+            'created_at': instance.created_at,
+        }
