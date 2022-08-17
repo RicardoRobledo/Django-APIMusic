@@ -5,13 +5,19 @@ from rest_framework import status
 from rest_framework.response import Response
 from django.db.models import Q
 from django.contrib.auth import login, logout, authenticate
-from ..users.serializers import UserSerializer
+from rest_framework_simplejwt.views import TokenObtainPairView
 
+from ..users.serializers import UserSerializer
 from apps.users.models import User
+from .serializers import CustomTokenObtainPairSerializer
 
 
 __author__ = 'Ricardo'
 __version__ = '0.1'
+
+
+class CustomObtainPairView(TokenObtainPairView):
+    serializer_class = CustomTokenObtainPairSerializer
 
 
 class LoginView(TokenObtainPairView):
@@ -19,7 +25,7 @@ class LoginView(TokenObtainPairView):
     This class allow us do a login
     """
     
-    serializer_class = TokenObtainPairSerializer
+    serializer_class = CustomTokenObtainPairSerializer
     
     def post(self, request, *args, **kwargs):
         """
