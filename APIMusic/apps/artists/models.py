@@ -18,7 +18,6 @@ class Artist(models.Model):
         name (str): Name of an artist.
         middle_name (str): Middle name of an artist.
         last_name (str): last_name of an artist.
-        age (int):  Age of an artist.
         genre (str): Genre of an artist.
         role (str): Role of an artist.
         created_at (datetime): Date of sign in of the artist in the database.

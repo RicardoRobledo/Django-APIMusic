@@ -19,46 +19,45 @@ __version__ = '0.1'
     operation_description="""
     get a user
 
-    :param id: id of our user
+    :param id: id of our user.
     """
 ))
 @method_decorator(name='create', decorator=swagger_auto_schema(
     operation_description="""
-    list our users
+    create a user
 
-    :param username: username of our user
-    :param name: name of our user
-    :param email: email of our user
+    :param username: username of our user.
+    :param name: name of our user.
+    :param email: email of our user.
     """
 ))
 @method_decorator(name='update', decorator=swagger_auto_schema(
     operation_description="""
     update a user
 
-    :param username: username of our user
-    :param name: name of our user
-    :param email: email of our user
+    :param username: username of our user.
+    :param name: name of our user.
+    :param email: email of our user.
     """
 ))
 @method_decorator(name='partial_update', decorator=swagger_auto_schema(
     operation_description="""
     update a user
 
-    :param username: username of our user
-    :param name: name of our user
-    :param email: email of our user
+    :param username: username of our user.
+    :param name: name of our user.
+    :param email: email of our user.
     """
 ))
 @method_decorator(name='destroy', decorator=swagger_auto_schema(
     operation_description="""
     eliminate a user
 
-    :param id: id of a user
+    :param id: id of a user.
     """
 ))
 class UserViewSet(ModelViewSet):
-    
-    serializer_class = None
+
     queryset = User.objects.all()
     
     def get_serializer_class(self):
@@ -68,4 +67,3 @@ class UserViewSet(ModelViewSet):
         else:
             self.serializer_class = UserSerializer
         return self.serializer_class
-        
