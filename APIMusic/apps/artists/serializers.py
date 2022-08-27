@@ -21,4 +21,4 @@ class ArtistSerializer(serializers.ModelSerializer):
             
         model = Artist
         fields = ('id' ,'name', 'middle_name', 'last_name',
-                'genre', 'role', 'band',)
+                'genre', 'role', 'band', 'created_at')

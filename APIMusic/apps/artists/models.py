@@ -47,6 +47,7 @@ class Artist(models.Model):
     )
     role = models.CharField(max_length=15)
     band = models.ForeignKey('bands.Band', on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
     
     
     def __str__(self):
