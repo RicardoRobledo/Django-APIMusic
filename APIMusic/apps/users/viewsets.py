@@ -1,6 +1,7 @@
 from rest_framework.viewsets import ModelViewSet
 from drf_yasg.utils import swagger_auto_schema
 from django.utils.decorators import method_decorator
+import django_filters
 
 from .models import User
 from .serializers import UserSerializer, UserUpdateSerializer
@@ -8,6 +9,22 @@ from .serializers import UserSerializer, UserUpdateSerializer
 
 __author__ = 'Ricardo'
 __version__ = '0.1'
+
+
+class UserFilter(django_filters.FilterSet):
+    
+    created_at = django_filters.DateTimeFilter(field_name='created_at', lookup_expr='exact')
+    created_at_before = django_filters.DateTimeFilter(field_name='created_at', lookup_expr='lt')
+    created_at_after = django_filters.DateTimeFilter(field_name='created_at', lookup_expr='gt')
+    
+    username = django_filters.CharFilter(field_name='username', lookup_expr='exact')
+    
+    class Meta:
+        model = User
+        fields = {
+            'username',
+            'created_at',
+        }
 
 
 @method_decorator(name='list', decorator=swagger_auto_schema(
@@ -59,6 +76,7 @@ __version__ = '0.1'
 class UserViewSet(ModelViewSet):
 
     queryset = User.objects.all()
+    filterset_class = UserFilter
     
     def get_serializer_class(self):
         
