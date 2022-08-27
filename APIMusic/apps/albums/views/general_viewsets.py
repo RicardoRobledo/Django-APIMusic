@@ -1,6 +1,7 @@
 from rest_framework import viewsets
 from drf_yasg.utils import swagger_auto_schema
 from django.utils.decorators import method_decorator
+import django_filters
 
 from ..models import Song
 from ..serializers.general_serializers import SongSerializer
@@ -9,6 +10,23 @@ from ..serializers.general_serializers import SongSerializer
 # -----------------------------------------------------------------
 #                            Song
 # -----------------------------------------------------------------
+
+class SongFilter(django_filters.FilterSet):
+    
+    song_name = django_filters.CharFilter(field_name='song_name', lookup_expr='exact')
+    duration_in_minutes = django_filters.NumberFilter(field_name='duration_in_minutes', lookup_expr='exact')
+    band = django_filters.NumberFilter(field_name='band', lookup_expr='exact')
+    album = django_filters.NumberFilter(field_name='album', lookup_expr='exact')
+    
+    class Meta:
+        model = Song
+        fields = {
+            'song_name',
+            'duration_in_minutes',
+            'created_at',
+            'band',
+            'album',
+        }
 
 
 @method_decorator(name='list', decorator=swagger_auto_schema(
@@ -66,3 +84,4 @@ class SongViewSet(viewsets.ModelViewSet):
 
     queryset = Song.objects.all()
     serializer_class = SongSerializer
+    filterset_class = SongFilter
