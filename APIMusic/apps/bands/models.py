@@ -44,7 +44,7 @@ class Band(models.Model):
         choices=Genre.choices
     )
     created_at = models.DateTimeField(auto_now_add=True)
-    album = models.ManyToManyField('albums.Album', through='albums.Song')
+    song = models.ManyToManyField('albums.Album', through='albums.Song')
     
     
     def __str__(self):

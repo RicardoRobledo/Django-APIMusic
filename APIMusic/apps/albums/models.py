@@ -49,8 +49,8 @@ class Song(models.Model):
     song_name = models.CharField(max_length=15)
     duration_in_minutes = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
-    band = models.ForeignKey('albums.Album', on_delete=models.CASCADE)
-    album = models.ForeignKey('bands.Band', on_delete=models.CASCADE)
+    band = models.ForeignKey('bands.Band', related_name='songs', on_delete=models.CASCADE)
+    album = models.ForeignKey('albums.Album', related_name='songs', on_delete=models.CASCADE)
     
     
     def __str__(self):
