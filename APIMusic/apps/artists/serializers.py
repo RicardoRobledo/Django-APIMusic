@@ -22,3 +22,17 @@ class ArtistSerializer(serializers.ModelSerializer):
         model = Artist
         fields = ('id' ,'name', 'middle_name', 'last_name',
                 'genre', 'role', 'band', 'created_at')
+
+
+    def to_representation(self, instance):
+        
+        return {
+            'id': instance.id,
+            'name': instance.name,
+            'middle_name': instance.middle_name,
+            'last_name': instance.last_name,
+            'genre': instance.genre,
+            'role': instance.role,
+            'band': instance.band.band_name,
+            'created_at': instance.created_at,
+        }

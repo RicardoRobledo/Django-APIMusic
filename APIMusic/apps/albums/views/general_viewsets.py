@@ -18,6 +18,10 @@ class SongFilter(django_filters.FilterSet):
     band = django_filters.NumberFilter(field_name='band', lookup_expr='exact')
     album = django_filters.NumberFilter(field_name='album', lookup_expr='exact')
     
+    created_at = django_filters.NumberFilter(field_name='album', lookup_expr='exact')
+    created_at_before = django_filters.NumberFilter(field_name='album', lookup_expr='lt')
+    created_at_created_atfter = django_filters.NumberFilter(field_name='album', lookup_expr='gt')
+    
     class Meta:
         model = Song
         fields = {
