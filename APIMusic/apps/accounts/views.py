@@ -25,7 +25,7 @@ class LoginView(TokenObtainPairView):
     """
     This class allow us do a login
     """
-    
+
     serializer_class = CustomTokenObtainPairSerializer
     
     def post(self, request, *args, **kwargs):
