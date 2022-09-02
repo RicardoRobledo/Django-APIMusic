@@ -2,6 +2,7 @@ from rest_framework import viewsets
 from drf_yasg.utils import swagger_auto_schema
 from django.utils.decorators import method_decorator
 import django_filters
+from rest_framework.permissions import IsAuthenticated
 
 from .models import Band
 from .serializers import BandSerializer
@@ -74,6 +75,7 @@ class BandFilter(django_filters.FilterSet):
 ))
 class BandViewSet(viewsets.ModelViewSet):
 
+    permission_classes = (IsAuthenticated,)
     queryset = Band.objects.all()
     serializer_class = BandSerializer
     filterset_class = BandFilter

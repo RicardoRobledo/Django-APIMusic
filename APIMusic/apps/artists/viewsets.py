@@ -2,7 +2,9 @@ from rest_framework import viewsets
 from drf_yasg.utils import swagger_auto_schema
 from django.utils.decorators import method_decorator
 import django_filters
+from rest_framework.permissions import IsAuthenticated
 
+#from apps.base.permissions import IsOwner
 from .models import Artist
 from .serializers import ArtistSerializer
 
@@ -85,6 +87,7 @@ class ArtistFilter(django_filters.FilterSet):
 ))
 class ArtistViewSet(viewsets.ModelViewSet):
 
+    permission_classes = (IsAuthenticated,)
     queryset = Artist.objects.all()
     serializer_class = ArtistSerializer
     filterset_class = ArtistFilter

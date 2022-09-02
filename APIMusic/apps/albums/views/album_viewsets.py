@@ -2,6 +2,7 @@ from rest_framework import viewsets
 from drf_yasg.utils import swagger_auto_schema
 from django.utils.decorators import method_decorator
 import django_filters
+from rest_framework.permissions import BasePermission
 
 from ..models import Album
 from ..serializers.album_serializers import AlbumSerializer
@@ -71,6 +72,7 @@ class AlbumFilter(django_filters.FilterSet):
 ))
 class AlbumViewSet(viewsets.ModelViewSet):
 
+    permission_classes = (BasePermission,)
     queryset = Album.objects.all()
     serializer_class = AlbumSerializer
     filterset_class = AlbumFilter
