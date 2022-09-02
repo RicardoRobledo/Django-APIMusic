@@ -5,6 +5,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from django.db.models import Q
 from django.contrib.auth import login, logout, authenticate
+from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.views import TokenObtainPairView
 
 from ..users.serializers import UserSerializer
@@ -52,6 +53,8 @@ class LogoutView(APIView):
     """
     This class allow us logout
     """
+    
+    permission_classes = (IsAuthenticated,)
 
     def get(self, request, *args, **kwargs):
         """
