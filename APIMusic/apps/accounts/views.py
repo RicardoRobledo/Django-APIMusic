@@ -83,7 +83,6 @@ class RegisterView(APIView):
         :param username: username
         """
         
-        
         message = None
         user_serializer = UserSerializer(data=request.data)
         

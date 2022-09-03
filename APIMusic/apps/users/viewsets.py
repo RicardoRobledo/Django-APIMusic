@@ -2,7 +2,9 @@ from rest_framework.viewsets import ModelViewSet
 from drf_yasg.utils import swagger_auto_schema
 from django.utils.decorators import method_decorator
 import django_filters
+from rest_framework.permissions import IsAuthenticated
 
+from apps.base.permissions import IsOwner
 from .models import User
 from .serializers import UserSerializer, UserUpdateSerializer
 
@@ -75,6 +77,7 @@ class UserFilter(django_filters.FilterSet):
 ))
 class UserViewSet(ModelViewSet):
 
+    permission_classes = (IsAuthenticated, IsOwner,)
     queryset = User.objects.all()
     filterset_class = UserFilter
     

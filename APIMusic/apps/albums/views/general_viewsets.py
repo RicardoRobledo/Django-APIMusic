@@ -2,7 +2,7 @@ from rest_framework import viewsets
 from drf_yasg.utils import swagger_auto_schema
 from django.utils.decorators import method_decorator
 import django_filters
-from rest_framework.permissions import BasePermission
+from rest_framework.permissions import IsAuthenticated
 
 from ..models import Song
 from ..serializers.general_serializers import SongSerializer
@@ -87,7 +87,7 @@ class SongFilter(django_filters.FilterSet):
 ))
 class SongViewSet(viewsets.ModelViewSet):
 
-    permission_classes = (BasePermission,)
+    permission_classes = (IsAuthenticated,)
     queryset = Song.objects.all()
     serializer_class = SongSerializer
     filterset_class = SongFilter
