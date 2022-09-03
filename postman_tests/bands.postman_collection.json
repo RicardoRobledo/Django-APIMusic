@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "78eeccd2-25c5-4480-8061-73fbe76143ef",
+		"name": "bands",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "band",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/bands/band/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"bands",
+						"band",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "band",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYxNjMxMDk0LCJpYXQiOjE2NjE2MzA3OTQsImp0aSI6IjQwYjc5ZjNlNGI1YTQzYjc5YzQ3ZmZiYjllYzM4MjE3IiwidXNlcl9pZCI6MSwibmFtZSI6ImZlciIsInVzZXJuYW1lIjoiZmVyIiwiZW1haWwiOiJmZXIifQ.fFtUcRF9iwvAKLLnnPStG35cPxXbpbJnA4VsuMg2c4w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "band_name",
+							"value": "caifanes",
+							"type": "default"
+						},
+						{
+							"key": "musical_genre",
+							"value": "ROCK",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/bands/band/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"bands",
+						"band",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "band",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYxNjMxNDU3LCJpYXQiOjE2NjE2MzA3OTQsImp0aSI6ImM5M2QzNjkyMGY3ZjRjNGRiMDllOGVmZjRlNTEwN2IyIiwidXNlcl9pZCI6MSwibmFtZSI6ImZlciIsInVzZXJuYW1lIjoiZmVyIiwiZW1haWwiOiJmZXIifQ.dQK5aLwAYj5xz_VgahIdx5ld9Q8n60MjK8bQ327mx20",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/bands/band/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"bands",
+						"band",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "band",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYxNjMyNjQ3LCJpYXQiOjE2NjE2MzExNTcsImp0aSI6IjUxYjI1ZjYxYTlhODRkMDk5Y2Y5Y2M5NzM5NjYxODEyIiwidXNlcl9pZCI6MSwibmFtZSI6ImZlciIsInVzZXJuYW1lIjoiZmVyIiwiZW1haWwiOiJmZXIifQ.yf_LSWWB7BHT2W28eq_pFGRDY7PbaB7wt6sI-TYZN_c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "band_name",
+							"value": "The paper kites",
+							"type": "default"
+						},
+						{
+							"key": "musical_genre",
+							"value": "INDIE_FOLK",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/bands/band/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"bands",
+						"band",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

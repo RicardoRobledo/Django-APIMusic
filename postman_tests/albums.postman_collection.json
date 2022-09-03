@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "8137dd37-1291-4550-9424-403157313834",
+		"name": "albums",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "album",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYxNjMzNDA1LCJpYXQiOjE2NjE2MzI3NjcsImp0aSI6IjQzZTQ5NmJlOWJlZjQ4NmFiYjMxYTkxMzRjYmRmNWM5IiwidXNlcl9pZCI6MSwibmFtZSI6ImZlciIsInVzZXJuYW1lIjoiZmVyIiwiZW1haWwiOiJmZXIifQ.9lw6B3nNM4qZgiDsoCjRsuqeVQC0E9D5cuXqamLlAaU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "album_name",
+							"value": "multicolor",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/albums/album/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"albums",
+						"album",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "album",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYxNjMzNDA1LCJpYXQiOjE2NjE2MzI3NjcsImp0aSI6IjQzZTQ5NmJlOWJlZjQ4NmFiYjMxYTkxMzRjYmRmNWM5IiwidXNlcl9pZCI6MSwibmFtZSI6ImZlciIsInVzZXJuYW1lIjoiZmVyIiwiZW1haWwiOiJmZXIifQ.9lw6B3nNM4qZgiDsoCjRsuqeVQC0E9D5cuXqamLlAaU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "album_name",
+							"value": "Cuerpo de papel",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/albums/album/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"albums",
+						"album",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "album",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/albums/album/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"albums",
+						"album",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "album",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYxNjMzNDA1LCJpYXQiOjE2NjE2MzI3NjcsImp0aSI6IjQzZTQ5NmJlOWJlZjQ4NmFiYjMxYTkxMzRjYmRmNWM5IiwidXNlcl9pZCI6MSwibmFtZSI6ImZlciIsInVzZXJuYW1lIjoiZmVyIiwiZW1haWwiOiJmZXIifQ.9lw6B3nNM4qZgiDsoCjRsuqeVQC0E9D5cuXqamLlAaU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/albums/album/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"albums",
+						"album",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

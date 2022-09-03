@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "a554449e-9e53-45a3-ae44-1aa64b121ad0",
+		"name": "artists",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "artist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYyMTYwNTEwLCJpYXQiOjE2NjIxNjAyMTAsImp0aSI6ImYwMjYxNTcxOTc5ZDQ2ZDRhOWZjZDAzZWI1NDE0ZTE5IiwidXNlcl9pZCI6MSwibmFtZSI6IkZlciIsInVzZXJuYW1lIjoiZmVyIiwiZW1haWwiOiJGZXIifQ.Pbx80M36mJnwUD9iDRGFWkoWtrCebSSHjIq7pJtjq08",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/artists/artist/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"artists",
+						"artist",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "artist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYyMTYwMTI4LCJpYXQiOjE2NjIxNTk4MjgsImp0aSI6ImRiNmRhYTgzODU2OTQ1MWE4YjdkOTEzOWRlZjQzYjhmIiwidXNlcl9pZCI6MSwibmFtZSI6IkZlciIsInVzZXJuYW1lIjoiZmVyIiwiZW1haWwiOiJGZXIifQ.lqiGqMxTYjmPmF2ztilDmKrv4c1eFZOGJTgqXtB3zDg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Sergio",
+							"type": "default"
+						},
+						{
+							"key": "middle_name",
+							"value": "Vallín",
+							"type": "default"
+						},
+						{
+							"key": "last_name",
+							"value": "V",
+							"type": "default"
+						},
+						{
+							"key": "genre",
+							"value": "M",
+							"type": "default"
+						},
+						{
+							"key": "role",
+							"value": "Guitarrista",
+							"type": "default"
+						},
+						{
+							"key": "band",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/artists/artist/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"artists",
+						"artist",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "artist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYyMTYzMzkxLCJpYXQiOjE2NjIxNjMwOTEsImp0aSI6IjA1ODQzNjljZjRiOTRhYmM4NjllNjEwMGMzN2ZjMGZmIiwidXNlcl9pZCI6MSwibmFtZSI6IkZlciIsInVzZXJuYW1lIjoiZmVyIiwiZW1haWwiOiJGZXIifQ.EFEJQ6ZatEHXD-dtcj82bkXq0qlMBg0aSOLM5mmX7Iw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Sergio",
+							"type": "default"
+						},
+						{
+							"key": "middle_name",
+							"value": "Vallín",
+							"type": "default"
+						},
+						{
+							"key": "last_name",
+							"value": "Gonzáles",
+							"type": "default"
+						},
+						{
+							"key": "genre",
+							"value": "M",
+							"type": "default"
+						},
+						{
+							"key": "role",
+							"value": "Guitarrista",
+							"type": "default"
+						},
+						{
+							"key": "band",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/artists/artist/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"artists",
+						"artist",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "artist",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/artists/artist/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"artists",
+						"artist",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

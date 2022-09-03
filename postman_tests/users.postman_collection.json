@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "9f2f5458-72dc-42d5-8f4a-db74f59711ce",
+		"name": "users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYyMTY2NTgwLCJpYXQiOjE2NjIxNjYyODAsImp0aSI6ImM1ODg0ODJhNGVjYzQ3OWNhOTFkNTBlYjJlNTViODNiIiwidXNlcl9pZCI6MywibmFtZSI6ImxvayIsInVzZXJuYW1lIjoiTG9rIiwiZW1haWwiOiJsb2sifQ.uqKXuOE2SzuzirewWHzcawOe37UfTTyvAvAnHdLQvMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/user/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU5NzQ2MzUwLCJpYXQiOjE2NTk3NDU0NTAsImp0aSI6Ijk3Y2E5ZDBmNGYwYTQzNTliYWU1MzNmOTk4YTM2ZTM4IiwidXNlcl9pZCI6MTJ9.Zp0tH0SpjHrNWKJGkA2yHkPpG3svQ92uHRaRYEP2QFU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/usr/users/18/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"usr",
+						"users",
+						"18",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYyMTY2OTQ2LCJpYXQiOjE2NjIxNjY2NDYsImp0aSI6ImU3ZjliMTZlYzUwMDRlZjdiNzYwODRjZjJmODgxMzE4IiwidXNlcl9pZCI6MSwibmFtZSI6IkZFUiIsInVzZXJuYW1lIjoiRmVyIiwiZW1haWwiOiJGRVIifQ.34zWYaUGWd7KysG-zrkojC3wT5I74lR2CGGq1YcC38Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "fer",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "emr@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "name",
+							"value": "Fer",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/user/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"user",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

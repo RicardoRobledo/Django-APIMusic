@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "af3a2ea0-a5c6-49d4-9e00-e046e6069f67",
+		"name": "tokens",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "token_refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "kyo",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "kofxv",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "refresh",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY2MTcxOTE2NywiaWF0IjoxNjYxNjMyNzY3LCJqdGkiOiJlNTZkMzI1NmU2MWE0MzkxOTQ0MjQxOTBmMDc0ZTUzZCIsInVzZXJfaWQiOjEsIm5hbWUiOiJmZXIiLCJ1c2VybmFtZSI6ImZlciIsImVtYWlsIjoiZmVyIn0.d6FTaO98YkiyjiBgzVumK4zHT-fnrgZFU5JteRAMXUA",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/refresh/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "fer",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
